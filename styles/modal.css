@@ -1,0 +1,84 @@
+/* Estilo do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1000; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: #fff; /* Fundo branco */
+    margin: 15% auto; /* Margem superior e centralização */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #888; /* Borda cinza */
+    width: 80%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilo do botão de fechar */
+.close {
+    color: #aaa; /* Cor do texto */
+    float: right; /* Alinha à direita */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Cor ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Estilo dos inputs */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem superior e inferior */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilo dos botões */
+.botoes-form {
+    display: flex; /* Flexbox para alinhar os botões */
+    justify-content: space-between; /* Espaço entre os botões */
+}
+
+.btn {
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Remove borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.btn.verde {
+    background-color: #28a745; /* Verde */
+    color: white; /* Texto branco */
+}
+
+.btn.verde:hover {
+    background-color: #218838; /* Verde escuro ao passar o mouse */
+}
+
+.btn.vermelho {
+    background-color: #dc3545; /* Vermelho */
+    color: white; /* Texto branco */
+}
+
+.btn.vermelho:hover {
+    background-color: #c82333; /* Vermelho escuro ao passar o mouse */
+}

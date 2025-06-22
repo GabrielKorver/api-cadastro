@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="./script/limparCadastro.js"></script>
+    <script src="./script/cadastrarUsuario.js"></script>
+    <script src="./script/tabelaUsuarios.js"></script>
+    <script src="./script/deletarUsuario.js"></script>
+    <script src="./script/esconderSenha.js"></script>
+    <script src="./script/modal.js"></script>
+    <script src="./script/atualizar.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Lista de Usuários</h1>
+
+        <div class="form">
+            <input type="text" id="nome" placeholder="Digite o nome..." required>
+            <input type="date" id="nascimento" required>
+            <input type="email" id="email" placeholder="Digite o e-mail..." required>
+            <input type="password" id="senha" placeholder="Digite a senha..." required minlength="8">
+
+            <div class="botoes-form">
+                <button class="btn verde" id="salvar" onclick="createUser()">Salvar</button>
+                <button class="btn vermelho" id="cancelar" onclick="clearInput()">Limpar</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#ID</th>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-usuarios">
+                <!-- Tabela de usuários dinâmica da api -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal de Atualização -->
+    <div id="modalAtualizar" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h3>Atualizar Cliente</h3>
+            <input type="hidden" id="clienteIdAtualizar">
+            <input type="text" id="nomeAtualizar" placeholder="Novo nome...">
+            <input type="date" id="nascimentoAtualizar" placeholder="Nova data...">
+            <input type="email" id="emailAtualizar" placeholder="Novo e-mail...">
+            <input type="password" id="senhaAtualizar" placeholder="Nova senha...">
+            <div class="botoes-form">
+                <button class="btn verde" onclick="atualizarCadastro()">Atualizar</button>
+                <button class="btn vermelho" onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
