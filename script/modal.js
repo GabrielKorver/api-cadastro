@@ -1,4 +1,4 @@
-function abrirModal(id) {
+function abrirModal(id, senhaCompleta) {
 
     document.querySelector('#modalAtualizar').style.display = 'flex';
 
@@ -14,18 +14,15 @@ function abrirModal(id) {
     document.querySelector('#emailAtualizar').value = email;
     document.querySelector('#senhaAtualizar').value = senha;
 
-mostrarSenha()
+mostrarSenha(senhaCompleta)
 
 }
 
-function mostrarSenha(id, senhaReal) {
-  const senhaText = document.getElementById(`user_senha_${id}`);
-  const eyeIcon = document.getElementById(`eye-icon-${id}`);
+function mostrarSenha(senha) {
+  const senhaText = document.getElementById(`senhaAtualizar`);
 
-  if (senhaText.textContent === '********') {
-    senhaText.textContent = senhaReal;
-    eyeIcon.classList.remove('fa-eye');
-    eyeIcon.classList.add('fa-eye-slash');
+  if (senhaText.value === '********') {
+    senhaText.value = senha;
   } 
 }
 

@@ -22,7 +22,7 @@ async function tabelaUsuarios() {
             </td>
             <td>
                 <div class="action-buttons">
-                    <button id="btnEditar" class="btn btn-edit" onclick="abrirModal(${cadaCliente.id})">
+                    <button id="btnEditar" class="btn btn-edit" onclick="abrirModal(${cadaCliente.id}, '${cadaCliente.senha}')">
                         <i class="fas fa-edit"></i> Editar
                     </button>
 
