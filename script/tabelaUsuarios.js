@@ -26,7 +26,7 @@ async function tabelaUsuarios() {
                         <i class="fas fa-edit"></i> Editar
                     </button>
 
-                    <button id="btnRemover" class="btn btn-delete" onclick="deletarUsuario(${cadaCliente.id})">
+                    <button id="btnRemover" class="btn btn-delete" onclick="abrirModalConfirmacao(${cadaCliente.id})">
                         <i class="fas fa-trash-alt"></i> Remover
                     </button>
                 </div>
