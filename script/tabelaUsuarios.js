@@ -1,5 +1,13 @@
+function formatarData(dataISO) {
+    const data = new Date(dataISO);
+    const dia = String(data.getDate()).padStart(2, '0');
+    const mes = String(data.getMonth() + 1).padStart(2, '0');
+    const ano = data.getFullYear();
+    return `${dia}/${mes}/${ano}`;
+}
+
 async function tabelaUsuarios() {
-    const URL = 'https://api-cadastro-backtend.onrender.com/usuario/';
+    const URL = API_BACK + 'usuario/';
     let response = await fetch(URL);
     let data = await response.json();
 
@@ -12,7 +20,7 @@ async function tabelaUsuarios() {
         <tr>
             <td><strong id='user_id_${cadaCliente._id}'>${cadaCliente._id}</strong></td>
             <td><strong id='user_name_${cadaCliente._id}'  >${cadaCliente.name.toUpperCase()}</strong></td>
-            <td><strong id='user_nascimento_${cadaCliente._id}'>${cadaCliente.dataNascimento}</strong></td>
+            <td><strong id='user_nascimento_${cadaCliente._id}'>${formatarData(cadaCliente.dataNascimento)}</strong></td>
             <td><strong id='user_email_${cadaCliente._id}'>${cadaCliente.email}</strong></td>
             <td>
                 <strong id="user_senha_${cadaCliente._id}">********</strong>
@@ -22,11 +30,11 @@ async function tabelaUsuarios() {
             </td>
             <td>
                 <div class="action-buttons">
-                    <button id="btnEditar" class="btn btn-edit" onclick="abrirModal(${cadaCliente._id}, '${cadaCliente.senha}')">
+                    <button id="btnEditar" class="btn btn-edit" onclick="abrirModal('${cadaCliente._id}', '${cadaCliente.senha}')">
                         <i class="fas fa-edit"></i> Editar
                     </button>
 
-                    <button id="btnRemover" class="btn btn-delete" onclick="abrirModalConfirmacao(${cadaCliente._id})">
+                    <button id="btnRemover" class="btn btn-delete" onclick="abrirModalConfirmacao('${cadaCliente._id}')">
                         <i class="fas fa-trash-alt"></i> Remover
                     </button>
                 </div>
@@ -41,5 +49,5 @@ async function tabelaUsuarios() {
 tabelaUsuarios();;
 
 
-    
+
 

@@ -4,7 +4,7 @@ async function createUser() {
     let email = window.document.querySelector('#email').value;
     let senha = window.document.querySelector('#senha').value;
 
-    const URL = "https://api-cadastro-backtend.onrender.com/usuario/";
+    const URL = API_BACK + 'usuario/';
 
     let newCliente = {
 		"name": name,

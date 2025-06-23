@@ -1,7 +1,7 @@
 async function atualizarCadastro() {
     let id = document.querySelector('#clienteIdAtualizar').value;
 
-    const URL = 'https://api-cadastro-backtend.onrender.com/usuario/' + id;
+    const URL = API_BACK + 'usuario/' +id;
 
     let nome = document.querySelector('#nomeAtualizar').value 
     let nascimento = document.querySelector('#nascimentoAtualizar').value 

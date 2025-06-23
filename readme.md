@@ -23,4 +23,4 @@ A função `tabelaUsuarios()` é responsável por:
 
 1. Fazer uma requisição `GET` para a API:
    ```js
-   const URL = 'https://api-cadastro-backtend.onrender.com';
+   const URL = API_BACK + 'usuario/'
