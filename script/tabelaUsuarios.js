@@ -1,5 +1,5 @@
 async function tabelaUsuarios() {
-    const URL = 'https://6856e44521f5d3463e53f236.mockapi.io/register';
+    const URL = 'https://api-cadastro-backtend.onrender.com';
     let response = await fetch(URL);
     let data = await response.json();
 

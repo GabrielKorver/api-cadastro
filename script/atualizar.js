@@ -1,7 +1,7 @@
 async function atualizarCadastro() {
     let id = document.querySelector('#clienteIdAtualizar').value;
 
-    const URL = 'https://6856e44521f5d3463e53f236.mockapi.io/register/' + id;
+    const URL = 'https://api-cadastro-backtend.onrender.com/' + id;
 
     let nome = document.querySelector('#nomeAtualizar').value 
     let nascimento = document.querySelector('#nascimentoAtualizar').value 
