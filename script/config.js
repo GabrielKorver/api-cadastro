@@ -1,0 +1,1 @@
+const API_BACK = "https://api-cadastro-backtend.onrender.com/";
