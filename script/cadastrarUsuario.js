@@ -4,7 +4,7 @@ async function createUser() {
     let email = window.document.querySelector('#email').value;
     let senha = window.document.querySelector('#senha').value;
 
-    const URL = "https://api-cadastro-backtend.onrender.com";
+    const URL = "https://api-cadastro-backtend.onrender.com/usuario";
 
     let newCliente = {
 		"name": name,
@@ -13,7 +13,7 @@ async function createUser() {
 		"senha": senha,
 		"id": "1"
     }
-    
+
     let response = await fetch( URL, {
         method: 'POST',
         headers: {'Content-Type':'application/json'},

@@ -1,5 +1,5 @@
 async function tabelaUsuarios() {
-    const URL = 'https://api-cadastro-backtend.onrender.com';
+    const URL = 'https://api-cadastro-backtend.onrender.com/usuario';
     let response = await fetch(URL);
     let data = await response.json();
 
