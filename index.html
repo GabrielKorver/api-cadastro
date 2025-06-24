@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 
+    <script src="./script/log.js"></script>
     <script src="./script/config.js"></script>
     <script src="./script/limparCadastro.js"></script>
     <script src="./script/cadastrarUsuario.js"></script>
@@ -16,8 +17,8 @@
     <script src="./script/esconderSenha.js"></script>
     <script src="./script/modal.js"></script>
     <script src="./script/atualizar.js"></script>
-    <script src="./script/modalRemover.js" ></script>
-    
+    <script src="./script/modalRemover.js"></script>
+
 
 </head>
 
@@ -34,7 +35,10 @@
 
             <div class="botoes-form">
                 <button class="btn verde" id="salvar" onclick="createUser()">Salvar</button>
-                <button class="btn vermelho" id="cancelar" onclick="clearInput()">Limpar</button>
+                <button class="btn vermelho" id="cancelar" onclick="clearInput()">Limpar</button>   
+                <button class="btn btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
             </div>
         </div>
 
@@ -73,16 +77,16 @@
     </div>
 
     <!-- Modal de Confirmação -->
-<div id="modalConfirmacao" class="modal">
-  <div class="modal-content">
-    <p>Tem certeza que deseja remover este cadastro?</p>
-    <div class="modal-botoes">
-        <input type="hidden" id="deletar">
-      <button id="confirmarRemocao" class="btn btn-danger" onclick="deletarUsuario()">Sim, remover</button>
-      <button id="cancelarRemocao" class="btn btn-secondary" onclick="modalCancelar()">Cancelar</button>
+    <div id="modalConfirmacao" class="modal">
+        <div class="modal-content">
+            <p>Tem certeza que deseja remover este cadastro?</p>
+            <div class="modal-botoes">
+                <input type="hidden" id="deletar">
+                <button id="confirmarRemocao" class="btn btn-danger" onclick="deletarUsuario()">Sim, remover</button>
+                <button id="cancelarRemocao" class="btn btn-secondary" onclick="modalCancelar()">Cancelar</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
 </body>
